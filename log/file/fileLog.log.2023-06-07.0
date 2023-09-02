@@ -1,0 +1,144 @@
+2023-06-07 11:23:33,400 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 5408 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-07 11:23:33,406 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-07 11:23:34,129 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-07 11:23:34,130 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-07 11:23:34,130 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-07 11:23:34,131 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-07 11:23:34,145 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-07 11:23:34,154 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-07 11:23:34,154 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-07 11:23:34,154 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-07 11:23:34,260 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-07 11:23:34,261 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 824 ms
+2023-06-07 11:23:34,440 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-07 11:23:34,774 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-07 11:23:34,788 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-07 11:23:34,795 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.765 seconds (JVM running for 2.241)
+2023-06-07 11:24:22,198 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-07 11:24:22,199 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-07 11:24:22,200 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-07 11:24:22,332 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-07 11:24:22,510 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-07 11:24:22,635 ERROR  [http-nio-8080-exec-1] (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist
+### The error may exist in com/example/yecaoshi/mapper/HUserMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,wxmini_unionid,wxmini_openid,balance,level,alipay,alipay_name,weixin,phone,realname,idcard,reg_time,login_count,login_time,status,status_time,is_auth,is_withdrawal,is_buy_md  FROM h_user     WHERE (phone = ?)
+### Cause: java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist] with root cause
+java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at jdk.proxy2/jdk.proxy2.$Proxy55.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy59.selectList(Unknown Source)
+	at com.baomidou.mybatisplus.core.mapper.BaseMapper.selectOne(BaseMapper.java:173)
+	at java.base/java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:731)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$DefaultMethodInvoker.invoke(MybatisMapperProxy.java:162)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy59.selectOne(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy2/jdk.proxy2.$Proxy60.selectOne(Unknown Source)
+	at com.example.yecaoshi.controller.login.checklogin(login.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-06-07 11:24:50,250 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-07 11:24:50,255 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-07 11:24:52,548 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 15024 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-07 11:24:52,555 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-07 11:24:53,258 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-07 11:24:53,259 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-07 11:24:53,259 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-07 11:24:53,259 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-07 11:24:53,263 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-07 11:24:53,271 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-07 11:24:53,271 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-07 11:24:53,271 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-07 11:24:53,363 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-07 11:24:53,364 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 777 ms
+2023-06-07 11:24:53,521 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-07 11:24:53,850 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-07 11:24:53,864 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-07 11:24:53,872 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.687 seconds (JVM running for 2.123)
+2023-06-07 11:26:58,203 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-07 11:26:58,203 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-07 11:26:58,204 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-07 11:26:58,225 WARN  [http-nio-8080-exec-1] (AbstractHandlerExceptionResolver.java:208)- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'mobile' for method parameter type String is not present]
+2023-06-07 11:27:39,754 INFO  [http-nio-8080-exec-2] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-07 11:27:39,869 INFO  [http-nio-8080-exec-2] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-07 11:27:39,906 ERROR  [http-nio-8080-exec-2] (login.java:38)- 请求失败

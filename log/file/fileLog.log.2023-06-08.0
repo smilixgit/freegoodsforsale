@@ -1,0 +1,1229 @@
+2023-06-08 14:02:34,270 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 13104 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 14:02:34,278 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 14:02:35,373 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 14:02:35,373 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 14:02:35,373 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 14:02:35,374 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 14:02:35,390 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 14:02:35,400 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 14:02:35,400 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 14:02:35,401 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 14:02:35,515 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 14:02:35,515 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 1158 ms
+2023-06-08 14:02:35,692 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 14:02:36,074 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 14:02:36,088 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 14:02:36,096 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 2.362 seconds (JVM running for 3.111)
+2023-06-08 14:02:47,979 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 14:02:47,980 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 14:02:47,980 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 0 ms
+2023-06-08 14:02:48,071 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 14:02:49,182 ERROR  [http-nio-8080-exec-1] (HikariPool.java:594)- HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at jdk.proxy2/jdk.proxy2.$Proxy55.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy59.selectList(Unknown Source)
+	at com.baomidou.mybatisplus.core.mapper.BaseMapper.selectOne(BaseMapper.java:173)
+	at java.base/java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:731)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$DefaultMethodInvoker.invoke(MybatisMapperProxy.java:162)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy59.selectOne(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy2/jdk.proxy2.$Proxy60.selectOne(Unknown Source)
+	at com.example.yecaoshi.controller.login.checklogin(login.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 98 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 101 common frames omitted
+2023-06-08 14:02:49,193 ERROR  [http-nio-8080-exec-1] (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in com/example/yecaoshi/mapper/HUserMapper.java (best guess)
+### The error may involve com.example.yecaoshi.mapper.HUserMapper.selectList
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] with root cause
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at jdk.proxy2/jdk.proxy2.$Proxy55.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy59.selectList(Unknown Source)
+	at com.baomidou.mybatisplus.core.mapper.BaseMapper.selectOne(BaseMapper.java:173)
+	at java.base/java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:731)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$DefaultMethodInvoker.invoke(MybatisMapperProxy.java:162)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy59.selectOne(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy2/jdk.proxy2.$Proxy60.selectOne(Unknown Source)
+	at com.example.yecaoshi.controller.login.checklogin(login.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-06-08 14:03:32,433 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 10188 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 14:03:32,436 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 14:03:33,217 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 14:03:33,218 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 14:03:33,219 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 14:03:33,220 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 14:03:33,223 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 14:03:33,231 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 14:03:33,232 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 14:03:33,232 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 14:03:33,331 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 14:03:33,331 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 858 ms
+2023-06-08 14:03:33,499 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 14:03:33,890 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 14:03:33,907 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 14:03:33,915 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.884 seconds (JVM running for 2.402)
+2023-06-08 14:03:40,860 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 14:03:40,861 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 14:03:40,861 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 0 ms
+2023-06-08 14:03:40,941 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 14:03:41,105 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 14:03:41,149 ERROR  [http-nio-8080-exec-1] (login.java:38)- 请求失败
+2023-06-08 14:07:33,170 WARN  [http-nio-8080-exec-3] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7fb12ce7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 14:07:33,171 WARN  [http-nio-8080-exec-3] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@22a581c6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 14:07:33,172 WARN  [http-nio-8080-exec-3] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@54055761 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 14:07:33,173 WARN  [http-nio-8080-exec-3] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7773efcd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 14:07:33,173 WARN  [http-nio-8080-exec-3] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6e913302 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 14:07:33,174 WARN  [http-nio-8080-exec-3] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@60b424a7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 14:07:33,174 WARN  [http-nio-8080-exec-3] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ef4d98f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 14:07:33,175 WARN  [http-nio-8080-exec-3] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7611501b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 14:07:33,175 WARN  [http-nio-8080-exec-3] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@11ff64f8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 14:07:33,176 WARN  [http-nio-8080-exec-3] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@502feb7c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 14:08:02,399 ERROR  [http-nio-8080-exec-5] (login.java:38)- 请求失败
+2023-06-08 14:59:02,667 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 14:59:02,670 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 14:59:05,563 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 14696 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 14:59:05,570 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 14:59:06,675 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 14:59:06,676 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 14:59:06,676 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 14:59:06,677 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 14:59:06,680 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 14:59:06,689 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 14:59:06,690 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 14:59:06,690 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 14:59:06,808 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 14:59:06,808 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 1191 ms
+2023-06-08 14:59:06,967 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 14:59:07,299 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 14:59:07,314 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 14:59:07,321 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 2.15 seconds (JVM running for 2.776)
+2023-06-08 15:43:02,429 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 4388 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 15:43:02,432 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 15:43:03,303 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 15:43:03,304 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 15:43:03,304 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 15:43:03,306 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 15:43:03,310 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 15:43:03,318 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 15:43:03,319 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 15:43:03,321 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 15:43:03,437 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 15:43:03,437 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 965 ms
+2023-06-08 15:43:03,648 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 15:43:04,054 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 15:43:04,076 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 15:43:04,083 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 2.083 seconds (JVM running for 2.639)
+2023-06-08 15:43:15,528 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 15:43:15,529 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 15:43:15,530 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 15:43:15,548 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:16)- login_check ----prehandle----
+2023-06-08 15:43:15,548 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:17)- login_checkmobile=1
+2023-06-08 15:43:15,637 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 15:43:15,794 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 15:43:15,835 ERROR  [http-nio-8080-exec-1] (login.java:38)- 请求失败
+2023-06-08 15:43:15,905 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:23)- login_check ----posthandle----
+2023-06-08 15:43:15,905 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:24)- 处理完了
+2023-06-08 15:43:15,907 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:30)- login_check ----afterCompletion----
+2023-06-08 15:43:15,911 ERROR  [http-nio-8080-exec-1] (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.ModelAndView.addObject(String, Object)" because "modelAndView" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.ModelAndView.addObject(String, Object)" because "modelAndView" is null
+	at com.example.yecaoshi.interC.LoginInterceptor.postHandle(LoginInterceptor.java:25)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPostHandle(HandlerExecutionChain.java:165)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1078)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-06-08 15:43:15,923 WARN  [http-nio-8080-exec-1] (AbstractHandlerExceptionResolver.java:208)- Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'text/plain;charset=UTF-8']
+2023-06-08 15:43:35,523 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 15:43:35,533 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 15:43:40,505 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 16484 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 15:43:40,507 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 15:43:41,369 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 15:43:41,370 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 15:43:41,370 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 15:43:41,371 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 15:43:41,376 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 15:43:41,384 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 15:43:41,386 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 15:43:41,388 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 15:43:41,501 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 15:43:41,502 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 956 ms
+2023-06-08 15:43:41,702 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 15:43:42,102 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 15:43:42,119 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 15:43:42,126 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 2.05 seconds (JVM running for 2.685)
+2023-06-08 15:49:25,824 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 15:49:25,824 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 15:49:25,825 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 15:49:25,840 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:16)- login_check ----prehandle----
+2023-06-08 15:49:25,841 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:17)- login_checkmobile=1
+2023-06-08 15:49:25,918 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 15:49:26,043 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 15:49:26,075 ERROR  [http-nio-8080-exec-1] (login.java:38)- 请求失败
+2023-06-08 15:49:26,140 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:23)- login_check ----posthandle----
+2023-06-08 15:49:26,140 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:24)- 处理完了
+2023-06-08 15:49:26,140 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:29)- login_check ----afterCompletion----
+2023-06-08 15:49:45,082 INFO  [http-nio-8080-exec-2] (LoginInterceptor.java:16)- login_check ----prehandle----
+2023-06-08 15:49:45,082 INFO  [http-nio-8080-exec-2] (LoginInterceptor.java:17)- login_checkmobile=1
+2023-06-08 15:49:45,084 ERROR  [http-nio-8080-exec-2] (login.java:38)- 请求失败
+2023-06-08 15:49:45,086 INFO  [http-nio-8080-exec-2] (LoginInterceptor.java:23)- login_check ----posthandle----
+2023-06-08 15:49:45,086 INFO  [http-nio-8080-exec-2] (LoginInterceptor.java:24)- 处理完了
+2023-06-08 15:49:45,087 INFO  [http-nio-8080-exec-2] (LoginInterceptor.java:29)- login_check ----afterCompletion----
+2023-06-08 15:57:31,403 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:16)- login_check ----prehandle----
+2023-06-08 15:57:31,403 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:17)- login_checkmobile=1
+2023-06-08 15:57:31,418 WARN  [http-nio-8080-exec-4] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5314950a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 15:57:31,419 WARN  [http-nio-8080-exec-4] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6542c0e3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 15:57:31,420 WARN  [http-nio-8080-exec-4] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1209b584 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 15:57:31,420 WARN  [http-nio-8080-exec-4] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@26233cbd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 15:57:31,421 WARN  [http-nio-8080-exec-4] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@375d65fa (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 15:57:31,422 WARN  [http-nio-8080-exec-4] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@446bee2a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 15:57:31,422 WARN  [http-nio-8080-exec-4] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1b11c6b6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 15:57:31,423 WARN  [http-nio-8080-exec-4] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@24e8d7bd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 15:57:31,423 WARN  [http-nio-8080-exec-4] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@78c6146f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 15:57:31,423 WARN  [http-nio-8080-exec-4] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6347bfe3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 15:57:31,429 ERROR  [http-nio-8080-exec-4] (login.java:38)- 请求失败
+2023-06-08 15:57:31,431 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:23)- login_check ----posthandle----
+2023-06-08 15:57:31,431 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:24)- 处理完了
+2023-06-08 15:57:31,431 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:29)- login_check ----afterCompletion----
+2023-06-08 16:15:15,430 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 17764 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 16:15:15,431 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 16:15:16,584 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 16:15:17,585 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.574 seconds (JVM running for 3.6)
+2023-06-08 16:15:18,136 INFO  [main] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 16:15:18,301 INFO  [main] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 16:15:18,400 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 16:15:18,406 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 16:15:39,844 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 8992 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 16:15:39,845 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 16:15:40,923 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 16:15:41,917 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.525 seconds (JVM running for 3.483)
+2023-06-08 16:15:42,476 INFO  [main] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 16:15:42,652 INFO  [main] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 16:15:42,710 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 16:15:42,715 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 16:39:14,334 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 16:39:14,337 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 16:56:44,287 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 16152 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 16:56:44,288 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 16:56:44,310 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 16:56:45,435 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 16:56:46,669 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.791 seconds (JVM running for 3.866)
+2023-06-08 16:58:12,947 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 12324 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 16:58:12,949 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 16:58:12,959 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 16:58:14,124 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 16:58:15,217 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.675 seconds (JVM running for 3.656)
+2023-06-08 17:00:03,824 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 18036 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:00:03,825 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:00:03,835 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:00:04,988 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:00:06,077 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.652 seconds (JVM running for 3.657)
+2023-06-08 17:02:31,456 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 14108 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:02:31,457 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:02:31,465 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:02:32,608 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:02:33,732 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.686 seconds (JVM running for 3.688)
+2023-06-08 17:05:43,658 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 18816 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:05:43,659 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:05:43,666 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:05:44,810 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:05:45,897 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.645 seconds (JVM running for 3.632)
+2023-06-08 17:06:30,386 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 18380 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:06:30,388 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:06:30,398 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:06:31,727 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:06:32,961 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 3.021 seconds (JVM running for 4.429)
+2023-06-08 17:08:09,036 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 8736 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:08:09,038 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:08:09,046 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:08:10,751 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:08:12,530 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 3.926 seconds (JVM running for 5.053)
+2023-06-08 17:08:47,930 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 15928 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:08:47,931 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:08:47,940 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:08:49,598 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:08:51,280 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 3.789 seconds (JVM running for 4.896)
+2023-06-08 17:16:05,743 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 15132 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:16:05,745 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:16:05,752 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:16:06,896 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:16:07,979 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.653 seconds (JVM running for 3.637)
+2023-06-08 17:16:49,958 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 14844 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:16:49,960 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:16:49,967 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:16:51,165 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:16:52,259 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.724 seconds (JVM running for 3.74)
+2023-06-08 17:20:30,342 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 17884 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:20:30,343 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:20:30,351 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:20:31,492 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:20:32,590 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.702 seconds (JVM running for 3.714)
+2023-06-08 17:20:43,261 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 10244 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:20:43,262 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:20:43,270 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:20:44,954 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:20:46,755 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 3.932 seconds (JVM running for 5.063)
+2023-06-08 17:22:41,612 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 20396 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:22:41,614 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:22:41,621 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:22:42,780 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:22:43,868 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.783 seconds (JVM running for 4.516)
+2023-06-08 17:23:16,083 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 15088 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:23:16,084 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:23:16,093 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:23:17,243 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:23:18,347 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.67 seconds (JVM running for 3.687)
+2023-06-08 17:23:41,309 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 19184 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:23:41,310 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:23:41,318 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:23:42,428 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:23:43,499 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.6 seconds (JVM running for 3.591)
+2023-06-08 17:24:11,226 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 7640 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:24:11,227 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:24:11,236 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:24:12,411 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:24:13,496 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.677 seconds (JVM running for 3.664)
+2023-06-08 17:24:52,074 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 17896 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:24:52,077 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:24:52,086 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:24:53,930 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:24:55,636 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 4.02 seconds (JVM running for 5.137)
+2023-06-08 17:24:56,616 INFO  [main] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 17:24:56,969 INFO  [main] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 17:25:00,977 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 17:25:00,984 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 17:25:27,414 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 16520 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:25:27,415 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:25:27,425 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:25:28,667 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:25:29,751 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.745 seconds (JVM running for 3.773)
+2023-06-08 17:25:30,256 INFO  [main] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 17:25:30,421 INFO  [main] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 17:25:30,641 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 17:25:30,650 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 17:26:11,443 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 8372 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:26:11,444 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:26:11,453 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:26:12,585 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:26:13,658 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.626 seconds (JVM running for 3.631)
+2023-06-08 17:27:16,948 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 19284 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:27:16,950 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:27:16,960 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:27:18,100 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:27:19,204 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.661 seconds (JVM running for 3.654)
+2023-06-08 17:27:19,754 INFO  [main] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 17:27:19,910 INFO  [main] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 17:27:20,149 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 17:27:20,157 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 17:56:54,670 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:56:54,676 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 18164 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:56:54,677 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:56:55,498 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 17:56:55,499 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 17:56:55,500 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 17:56:55,500 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 17:56:55,503 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 17:56:55,513 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 17:56:55,514 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 17:56:55,514 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 17:56:55,629 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 17:56:55,629 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 916 ms
+2023-06-08 17:56:55,800 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:56:56,200 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 17:56:56,216 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 17:56:56,223 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.955 seconds (JVM running for 2.484)
+2023-06-08 17:57:39,270 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 17:57:39,270 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 17:57:39,271 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 17:57:39,286 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:16)- login_check ----prehandle----
+2023-06-08 17:57:39,286 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:17)- login_check 检测token
+2023-06-08 17:58:38,408 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:16)- login_check ----prehandle----
+2023-06-08 17:58:38,409 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:17)- login_check 检测token
+2023-06-08 17:58:38,474 INFO  [http-nio-8080-exec-3] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 17:58:38,604 INFO  [http-nio-8080-exec-3] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 17:58:38,686 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:31)- login_check ----afterCompletion----
+2023-06-08 17:58:38,688 ERROR  [http-nio-8080-exec-3] (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist
+### The error may exist in com/example/yecaoshi/mapper/HUserMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,wxmini_unionid,wxmini_openid,balance,level,alipay,alipay_name,weixin,phone,realname,idcard,reg_time,login_count,login_time,status,status_time,is_auth,is_withdrawal,is_buy_md  FROM h_user     WHERE (phone = ?)
+### Cause: java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist] with root cause
+java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at jdk.proxy2/jdk.proxy2.$Proxy58.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy62.selectList(Unknown Source)
+	at com.baomidou.mybatisplus.core.mapper.BaseMapper.selectOne(BaseMapper.java:173)
+	at java.base/java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:731)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$DefaultMethodInvoker.invoke(MybatisMapperProxy.java:162)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy62.selectOne(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy2/jdk.proxy2.$Proxy63.selectOne(Unknown Source)
+	at com.example.yecaoshi.controller.login.checklogin(login.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-06-08 17:58:49,182 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 17:58:49,187 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 17:58:53,557 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:58:53,564 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 14696 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:58:53,564 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:58:54,387 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 17:58:54,388 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 17:58:54,388 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 17:58:54,388 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 17:58:54,391 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 17:58:54,400 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 17:58:54,400 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 17:58:54,401 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 17:58:54,512 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 17:58:54,512 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 912 ms
+2023-06-08 17:58:54,716 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:58:55,133 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 17:58:55,147 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 17:58:55,154 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.993 seconds (JVM running for 2.616)
+2023-06-08 17:58:58,639 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 17:58:58,639 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 17:58:58,640 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 17:58:58,654 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:16)- login_check ----prehandle----
+2023-06-08 17:58:58,654 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:17)- login_check 检测token
+2023-06-08 17:58:58,720 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 17:58:58,852 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 17:58:58,933 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:31)- login_check ----afterCompletion----
+2023-06-08 17:58:58,935 ERROR  [http-nio-8080-exec-1] (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist
+### The error may exist in com/example/yecaoshi/mapper/HUserMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,wxmini_unionid,wxmini_openid,balance,level,alipay,alipay_name,weixin,phone,realname,idcard,reg_time,login_count,login_time,status,status_time,is_auth,is_withdrawal,is_buy_md  FROM h_user     WHERE (phone = ?)
+### Cause: java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist] with root cause
+java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at jdk.proxy2/jdk.proxy2.$Proxy58.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy62.selectList(Unknown Source)
+	at com.baomidou.mybatisplus.core.mapper.BaseMapper.selectOne(BaseMapper.java:173)
+	at java.base/java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:731)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$DefaultMethodInvoker.invoke(MybatisMapperProxy.java:162)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy62.selectOne(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy2/jdk.proxy2.$Proxy63.selectOne(Unknown Source)
+	at com.example.yecaoshi.controller.login.checklogin(login.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-06-08 17:59:16,120 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 17:59:16,126 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 17:59:18,736 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 17:59:18,741 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 19764 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 17:59:18,741 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 17:59:19,555 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 17:59:19,556 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 17:59:19,557 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 17:59:19,558 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 17:59:19,562 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 17:59:19,570 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 17:59:19,570 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 17:59:19,570 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 17:59:19,678 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 17:59:19,678 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 901 ms
+2023-06-08 17:59:19,852 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 17:59:20,251 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 17:59:20,265 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 17:59:20,274 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.923 seconds (JVM running for 2.417)
+2023-06-08 18:04:00,941 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:04:00,941 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 18:04:00,942 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 18:04:00,957 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:16)- login_check ----prehandle----
+2023-06-08 18:04:00,957 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:17)- login_check 检测token
+2023-06-08 18:04:01,026 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 18:04:01,158 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 18:04:01,189 ERROR  [http-nio-8080-exec-1] (login.java:38)- 请求失败
+2023-06-08 18:04:01,252 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:25)- login_check ----posthandle----
+2023-06-08 18:04:01,253 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:26)- 处理完了
+2023-06-08 18:04:01,253 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:31)- login_check ----afterCompletion----
+2023-06-08 18:04:14,538 INFO  [http-nio-8080-exec-2] (LoginInterceptor.java:16)- login_check ----prehandle----
+2023-06-08 18:04:14,538 INFO  [http-nio-8080-exec-2] (LoginInterceptor.java:17)- login_check 检测token
+2023-06-08 18:04:27,963 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:16)- login_check ----prehandle----
+2023-06-08 18:04:27,964 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:17)- login_check 检测token
+2023-06-08 18:04:27,967 ERROR  [http-nio-8080-exec-4] (login.java:38)- 请求失败
+2023-06-08 18:04:27,969 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:25)- login_check ----posthandle----
+2023-06-08 18:04:27,969 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:26)- 处理完了
+2023-06-08 18:04:27,969 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:31)- login_check ----afterCompletion----
+2023-06-08 18:14:46,451 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 18:14:46,460 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 18:14:51,595 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 18:14:51,601 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 2380 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 18:14:51,604 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:14:52,592 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 18:14:52,593 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 18:14:52,594 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 18:14:52,594 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 18:14:52,599 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 18:14:52,610 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:14:52,610 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 18:14:52,610 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 18:14:52,762 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 18:14:52,763 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 1123 ms
+2023-06-08 18:14:52,980 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 18:14:53,465 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:14:53,480 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 18:14:53,488 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 2.331 seconds (JVM running for 2.959)
+2023-06-08 18:14:58,431 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:14:58,431 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 18:14:58,434 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 2 ms
+2023-06-08 18:14:58,459 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:22)- login_check ----prehandle----
+2023-06-08 18:14:58,459 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:23)- login_check 检测token
+2023-06-08 18:14:58,532 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 18:14:58,686 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 18:14:58,726 ERROR  [http-nio-8080-exec-1] (login.java:38)- 请求失败
+2023-06-08 18:14:58,798 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:43)- login_check ----posthandle----
+2023-06-08 18:14:58,799 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:44)- 处理完了
+2023-06-08 18:14:58,800 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:49)- login_check ----afterCompletion----
+2023-06-08 18:15:08,419 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:22)- login_check ----prehandle----
+2023-06-08 18:15:08,420 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:23)- login_check 检测token
+2023-06-08 18:18:09,620 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 18:18:09,626 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 18:18:14,191 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 18:18:14,195 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 20256 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 18:18:14,196 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:18:15,017 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 18:18:15,018 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 18:18:15,019 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 18:18:15,020 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 18:18:15,023 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 18:18:15,032 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:18:15,032 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 18:18:15,032 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 18:18:15,147 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 18:18:15,148 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 914 ms
+2023-06-08 18:18:15,336 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 18:18:15,750 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:18:15,763 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 18:18:15,771 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.98 seconds (JVM running for 2.492)
+2023-06-08 18:18:26,898 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:18:26,898 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 18:18:26,899 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 18:18:26,912 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:22)- login_check ----prehandle----
+2023-06-08 18:18:26,912 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:23)- login_check 检测token
+2023-06-08 18:18:26,977 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 18:18:27,106 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 18:18:27,144 ERROR  [http-nio-8080-exec-1] (login.java:38)- 请求失败
+2023-06-08 18:18:27,214 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:46)- login_check ----posthandle----
+2023-06-08 18:18:27,215 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:47)- 处理完了
+2023-06-08 18:18:27,215 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:52)- login_check ----afterCompletion----
+2023-06-08 18:18:31,253 INFO  [http-nio-8080-exec-5] (LoginInterceptor.java:22)- login_check ----prehandle----
+2023-06-08 18:18:31,253 INFO  [http-nio-8080-exec-5] (LoginInterceptor.java:23)- login_check 检测token
+2023-06-08 18:24:41,939 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:22)- login_check ----prehandle----
+2023-06-08 18:24:41,940 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:23)- login_check 检测token
+2023-06-08 18:24:50,839 INFO  [http-nio-8080-exec-6] (LoginInterceptor.java:22)- login_check ----prehandle----
+2023-06-08 18:24:50,840 INFO  [http-nio-8080-exec-6] (LoginInterceptor.java:23)- login_check 检测token
+2023-06-08 18:24:50,851 WARN  [http-nio-8080-exec-6] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@520ad8bb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 18:24:50,852 WARN  [http-nio-8080-exec-6] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1b674b17 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 18:24:50,853 WARN  [http-nio-8080-exec-6] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1fac97c0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 18:24:50,853 WARN  [http-nio-8080-exec-6] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2beaffce (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 18:24:50,854 WARN  [http-nio-8080-exec-6] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5445b73d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 18:24:50,854 WARN  [http-nio-8080-exec-6] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@75db7151 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 18:24:50,855 WARN  [http-nio-8080-exec-6] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@e32eabd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 18:24:50,855 WARN  [http-nio-8080-exec-6] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@72da703a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 18:24:50,855 WARN  [http-nio-8080-exec-6] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@b5fcd03 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 18:24:50,856 WARN  [http-nio-8080-exec-6] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@252074c0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-08 18:24:50,868 INFO  [http-nio-8080-exec-6] (LoginInterceptor.java:46)- login_check ----posthandle----
+2023-06-08 18:24:50,868 INFO  [http-nio-8080-exec-6] (LoginInterceptor.java:47)- 处理完了
+2023-06-08 18:24:50,868 INFO  [http-nio-8080-exec-6] (LoginInterceptor.java:52)- login_check ----afterCompletion----
+2023-06-08 18:36:23,554 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 18:36:23,558 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 18:36:28,445 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 18:36:28,456 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 9440 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 18:36:28,456 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:36:29,284 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 18:36:29,285 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 18:36:29,287 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 18:36:29,287 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 18:36:29,290 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 18:36:29,298 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:36:29,300 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 18:36:29,301 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 18:36:29,413 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 18:36:29,413 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 921 ms
+2023-06-08 18:36:29,588 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 18:36:30,002 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:36:30,016 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 18:36:30,024 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.971 seconds (JVM running for 2.468)
+2023-06-08 18:36:34,671 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:36:34,672 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 18:36:34,672 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 0 ms
+2023-06-08 18:36:34,684 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:26)- login_check ----prehandle----
+2023-06-08 18:36:34,685 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:27)- login_check 检测token
+2023-06-08 18:36:34,755 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 18:36:34,877 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 18:36:35,019 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:49)- login_check ----posthandle----
+2023-06-08 18:36:35,019 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:50)- 处理完了
+2023-06-08 18:36:35,020 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:55)- login_check ----afterCompletion----
+2023-06-08 18:36:47,448 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:26)- login_check ----prehandle----
+2023-06-08 18:36:47,449 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:27)- login_check 检测token
+2023-06-08 18:36:47,454 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:49)- login_check ----posthandle----
+2023-06-08 18:36:47,454 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:50)- 处理完了
+2023-06-08 18:36:47,454 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:55)- login_check ----afterCompletion----
+2023-06-08 18:37:07,706 INFO  [http-nio-8080-exec-8] (LoginInterceptor.java:26)- login_check ----prehandle----
+2023-06-08 18:37:07,706 INFO  [http-nio-8080-exec-8] (LoginInterceptor.java:27)- login_check 检测token
+2023-06-08 18:37:07,709 ERROR  [http-nio-8080-exec-8] (login.java:41)- 请求失败
+2023-06-08 18:37:07,710 INFO  [http-nio-8080-exec-8] (LoginInterceptor.java:49)- login_check ----posthandle----
+2023-06-08 18:37:07,710 INFO  [http-nio-8080-exec-8] (LoginInterceptor.java:50)- 处理完了
+2023-06-08 18:37:07,710 INFO  [http-nio-8080-exec-8] (LoginInterceptor.java:55)- login_check ----afterCompletion----
+2023-06-08 18:37:44,564 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 18:37:44,569 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 18:37:48,703 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 18:37:48,707 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 15404 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 18:37:48,708 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:37:49,532 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 18:37:49,533 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 18:37:49,533 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 18:37:49,534 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 18:37:49,537 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 18:37:49,547 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:37:49,547 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 18:37:49,547 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 18:37:49,658 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 18:37:49,659 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 912 ms
+2023-06-08 18:37:49,835 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 18:37:50,240 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:37:50,254 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 18:37:50,262 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.94 seconds (JVM running for 2.438)
+2023-06-08 18:37:56,025 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:37:56,025 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 18:37:56,026 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 18:37:56,039 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:26)- login_check ----prehandle----
+2023-06-08 18:37:56,040 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:27)- login_check 检测token
+2023-06-08 18:37:56,106 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 18:37:56,233 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 18:37:56,281 ERROR  [http-nio-8080-exec-1] (login.java:41)- 请求失败
+2023-06-08 18:37:56,353 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:51)- login_check ----posthandle----
+2023-06-08 18:37:56,353 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:52)- 处理完了
+2023-06-08 18:37:56,353 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:57)- login_check ----afterCompletion----
+2023-06-08 18:38:35,209 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 18:38:35,215 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 18:38:39,759 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 18:38:39,764 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 18824 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 18:38:39,765 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:38:40,585 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 18:38:40,586 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 18:38:40,588 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 18:38:40,588 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 18:38:40,591 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 18:38:40,599 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:38:40,600 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 18:38:40,600 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 18:38:40,716 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 18:38:40,716 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 916 ms
+2023-06-08 18:38:40,878 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 18:38:41,269 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:38:41,282 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 18:38:41,290 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.976 seconds (JVM running for 2.47)
+2023-06-08 18:38:45,438 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:38:45,439 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 18:38:45,440 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 18:38:45,452 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:26)- login_check ----prehandle----
+2023-06-08 18:38:45,452 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:27)- login_check 检测token
+2023-06-08 18:38:45,528 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 18:38:45,663 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 18:38:45,701 ERROR  [http-nio-8080-exec-1] (login.java:41)- 请求失败
+2023-06-08 18:38:45,763 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:55)- login_check ----posthandle----
+2023-06-08 18:38:45,763 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:56)- 处理完了
+2023-06-08 18:38:45,763 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:61)- login_check ----afterCompletion----
+2023-06-08 18:40:12,683 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 18:40:12,688 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 18:40:17,176 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 18:40:17,182 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 17420 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 18:40:17,182 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:40:17,999 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 18:40:18,000 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 18:40:18,001 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 18:40:18,002 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 18:40:18,005 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 18:40:18,013 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:40:18,014 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 18:40:18,014 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 18:40:18,123 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 18:40:18,124 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 902 ms
+2023-06-08 18:40:18,292 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 18:40:18,697 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:40:18,710 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 18:40:18,718 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.917 seconds (JVM running for 2.419)
+2023-06-08 18:40:23,727 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:40:23,727 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 18:40:23,728 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 18:40:23,742 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:28)- login_check ----prehandle----
+2023-06-08 18:40:23,742 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:29)- login_check 检测token
+2023-06-08 18:40:23,821 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 18:40:23,958 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 18:40:23,996 ERROR  [http-nio-8080-exec-1] (login.java:41)- 请求失败
+2023-06-08 18:40:24,075 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:58)- login_check ----posthandle----
+2023-06-08 18:40:24,075 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:59)- 处理完了
+2023-06-08 18:40:24,075 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:64)- login_check ----afterCompletion----
+2023-06-08 18:41:41,999 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 18:41:42,004 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 18:41:46,706 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 18:41:46,712 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 17652 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 18:41:46,713 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:41:47,538 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 18:41:47,539 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 18:41:47,540 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 18:41:47,540 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 18:41:47,543 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 18:41:47,552 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:41:47,552 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 18:41:47,552 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 18:41:47,666 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 18:41:47,666 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 917 ms
+2023-06-08 18:41:47,838 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 18:41:48,254 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:41:48,269 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 18:41:48,277 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.964 seconds (JVM running for 2.489)
+2023-06-08 18:41:53,315 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:41:53,315 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 18:41:53,316 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 18:41:53,330 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:28)- login_check ----prehandle----
+2023-06-08 18:41:53,330 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:29)- login_check 检测token
+2023-06-08 18:41:53,407 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 18:41:53,540 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 18:41:53,585 ERROR  [http-nio-8080-exec-1] (login.java:41)- 请求失败
+2023-06-08 18:41:53,656 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:59)- login_check ----posthandle----
+2023-06-08 18:41:53,656 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:60)- 处理完了
+2023-06-08 18:41:53,656 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:65)- login_check ----afterCompletion----
+2023-06-08 18:42:04,444 INFO  [http-nio-8080-exec-2] (LoginInterceptor.java:28)- login_check ----prehandle----
+2023-06-08 18:42:04,444 INFO  [http-nio-8080-exec-2] (LoginInterceptor.java:29)- login_check 检测token
+2023-06-08 18:42:11,758 INFO  [http-nio-8080-exec-9] (LoginInterceptor.java:28)- login_check ----prehandle----
+2023-06-08 18:42:11,759 INFO  [http-nio-8080-exec-9] (LoginInterceptor.java:29)- login_check 检测token
+2023-06-08 18:42:35,595 INFO  [http-nio-8080-exec-6] (LoginInterceptor.java:28)- login_check ----prehandle----
+2023-06-08 18:42:35,595 INFO  [http-nio-8080-exec-6] (LoginInterceptor.java:29)- login_check 检测token
+2023-06-08 18:42:35,598 ERROR  [http-nio-8080-exec-6] (login.java:41)- 请求失败
+2023-06-08 18:42:35,599 INFO  [http-nio-8080-exec-6] (LoginInterceptor.java:59)- login_check ----posthandle----
+2023-06-08 18:42:35,600 INFO  [http-nio-8080-exec-6] (LoginInterceptor.java:60)- 处理完了
+2023-06-08 18:42:35,600 INFO  [http-nio-8080-exec-6] (LoginInterceptor.java:65)- login_check ----afterCompletion----
+2023-06-08 18:42:54,720 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 18:42:54,725 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 18:42:59,471 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 18:42:59,476 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 16764 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 18:42:59,477 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:43:00,287 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 18:43:00,288 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 18:43:00,288 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 18:43:00,290 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 18:43:00,293 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 18:43:00,301 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:43:00,302 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 18:43:00,302 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 18:43:00,409 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 18:43:00,410 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 896 ms
+2023-06-08 18:43:00,586 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 18:43:00,979 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:43:00,993 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 18:43:01,000 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.912 seconds (JVM running for 2.372)
+2023-06-08 18:43:03,403 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:43:03,403 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 18:43:03,404 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 18:43:03,415 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:28)- login_check ----prehandle----
+2023-06-08 18:43:03,416 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:29)- login_check 检测token
+2023-06-08 18:43:03,496 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 18:43:03,628 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 18:43:03,665 ERROR  [http-nio-8080-exec-1] (login.java:41)- 请求失败
+2023-06-08 18:43:03,740 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:59)- login_check ----posthandle----
+2023-06-08 18:43:03,740 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:60)- 处理完了
+2023-06-08 18:43:03,741 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:65)- login_check ----afterCompletion----
+2023-06-08 18:46:08,534 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 18:46:08,539 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 18:46:13,976 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 18:46:13,981 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 18236 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 18:46:13,981 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:46:14,895 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 18:46:14,896 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 18:46:14,896 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 18:46:14,898 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 18:46:14,901 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 18:46:14,913 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:46:14,914 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 18:46:14,916 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 18:46:15,037 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 18:46:15,037 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 1016 ms
+2023-06-08 18:46:15,229 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 18:46:15,680 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:46:15,698 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 18:46:15,711 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 2.171 seconds (JVM running for 2.768)
+2023-06-08 18:47:05,580 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:47:05,580 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 18:47:05,581 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 18:47:05,600 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-08 18:47:05,600 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-08 18:47:17,864 INFO  [http-nio-8080-exec-2] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-08 18:47:17,864 INFO  [http-nio-8080-exec-2] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-08 18:47:29,647 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-08 18:47:29,648 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-08 18:47:58,314 INFO  [http-nio-8080-exec-5] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-08 18:47:58,314 INFO  [http-nio-8080-exec-5] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-08 18:48:21,227 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 18:48:21,233 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 20048 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 18:48:21,233 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:48:22,184 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 18:48:22,185 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 18:48:22,186 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 18:48:22,186 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 18:48:22,189 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 18:48:22,197 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:48:22,198 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 18:48:22,199 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 18:48:22,331 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 18:48:22,332 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 1053 ms
+2023-06-08 18:48:22,531 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 18:48:22,994 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:48:23,012 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 18:48:23,020 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 2.225 seconds (JVM running for 2.79)
+2023-06-08 18:48:27,076 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:48:27,076 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 18:48:27,078 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-08 18:48:27,091 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-08 18:48:27,091 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-08 18:48:27,167 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-08 18:48:27,315 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-08 18:48:27,498 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:54)- login_check ----posthandle----
+2023-06-08 18:48:27,498 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:55)- 处理完了
+2023-06-08 18:48:27,499 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:60)- login_check ----afterCompletion----
+2023-06-08 18:48:50,329 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-08 18:48:50,329 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-08 18:48:50,334 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:54)- login_check ----posthandle----
+2023-06-08 18:48:50,334 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:55)- 处理完了
+2023-06-08 18:48:50,334 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:60)- login_check ----afterCompletion----
+2023-06-08 18:49:06,497 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-08 18:49:06,504 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-08 18:49:12,318 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-08 18:49:12,324 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 5964 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-08 18:49:12,324 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:49:13,321 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-08 18:49:13,325 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-08 18:49:13,326 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-08 18:49:13,326 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-08 18:49:13,329 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-08 18:49:13,338 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:49:13,338 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-08 18:49:13,338 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-08 18:49:13,473 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-08 18:49:13,473 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 1108 ms
+2023-06-08 18:49:13,703 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-08 18:49:14,192 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-08 18:49:14,211 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-08 18:49:14,219 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 2.421 seconds (JVM running for 2.956)
+2023-06-08 18:49:20,388 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:49:20,389 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-08 18:49:20,393 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 3 ms
+2023-06-08 18:49:20,407 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-08 18:49:20,407 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:30)- login_check 检测token

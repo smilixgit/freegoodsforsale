@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/ceshi?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+# mybatis plus ??
+mybatis-plus:
+  type-aliases-package: com.example.yecaoshi.mapper
+logging:
+  config: classpath:config/log/logback.xml
+# jwt 配置
+jwt:
+  header: "Authorization"     # token 返回头部
+  tokenPrefix: "smilix "      # token 前缀
+  secret: "qwertyuiop1214156" # 私钥
+
+
+

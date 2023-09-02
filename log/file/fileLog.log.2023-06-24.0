@@ -1,0 +1,267 @@
+2023-06-24 16:58:29,735 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 13196 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-24 16:58:29,732 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-24 16:58:29,737 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-24 16:58:30,584 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-24 16:58:30,585 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-24 16:58:30,586 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-24 16:58:30,586 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-24 16:58:30,601 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-24 16:58:30,609 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-24 16:58:30,610 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-24 16:58:30,610 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-24 16:58:30,727 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-24 16:58:30,727 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 946 ms
+2023-06-24 16:58:30,931 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-24 16:58:31,358 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-24 16:58:31,373 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-24 16:58:31,381 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 2.135 seconds (JVM running for 2.819)
+2023-06-24 16:58:48,368 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-24 16:58:48,368 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-24 16:58:48,369 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-24 16:59:34,856 INFO  [http-nio-8080-exec-6] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-24 16:59:34,857 INFO  [http-nio-8080-exec-6] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-24 17:01:20,144 INFO  [http-nio-8080-exec-7] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-24 17:01:20,145 INFO  [http-nio-8080-exec-7] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-24 17:04:15,270 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-24 17:04:15,276 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 14052 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-24 17:04:15,276 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-24 17:04:16,065 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-24 17:04:16,066 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-24 17:04:16,066 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-24 17:04:16,067 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-24 17:04:16,071 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-24 17:04:16,079 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:04:16,080 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-24 17:04:16,081 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-24 17:04:16,182 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-24 17:04:16,182 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 868 ms
+2023-06-24 17:04:16,339 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-24 17:04:16,725 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:04:16,738 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-24 17:04:16,746 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.849 seconds (JVM running for 2.331)
+2023-06-24 17:04:23,284 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-24 17:04:23,284 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-24 17:04:23,284 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 0 ms
+2023-06-24 17:04:23,295 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-24 17:04:23,297 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-24 17:05:10,960 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-24 17:05:10,965 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 13892 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-24 17:05:10,966 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-24 17:05:11,732 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-24 17:05:11,733 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-24 17:05:11,733 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-24 17:05:11,733 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-24 17:05:11,736 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-24 17:05:11,744 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:05:11,744 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-24 17:05:11,745 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-24 17:05:11,844 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-24 17:05:11,844 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 845 ms
+2023-06-24 17:05:12,016 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-24 17:05:12,409 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:05:12,422 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-24 17:05:12,429 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.89 seconds (JVM running for 2.405)
+2023-06-24 17:05:16,069 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-24 17:05:16,069 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-24 17:05:16,070 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-24 17:05:16,147 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-24 17:05:16,278 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-24 17:05:41,915 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-24 17:05:41,922 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-24 17:05:45,869 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-24 17:05:45,876 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 5464 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-24 17:05:45,877 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-24 17:05:46,639 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-24 17:05:46,640 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-24 17:05:46,640 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-24 17:05:46,640 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-24 17:05:46,643 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-24 17:05:46,651 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:05:46,652 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-24 17:05:46,653 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-24 17:05:46,753 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-24 17:05:46,753 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 839 ms
+2023-06-24 17:05:46,920 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-24 17:05:47,302 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:05:47,317 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-24 17:05:47,325 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.809 seconds (JVM running for 2.328)
+2023-06-24 17:05:50,533 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-24 17:05:50,534 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-24 17:05:50,534 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 0 ms
+2023-06-24 17:05:50,545 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-24 17:05:50,545 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-24 17:06:13,721 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-24 17:06:13,728 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 13116 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-24 17:06:13,728 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-24 17:06:14,494 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-24 17:06:14,495 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-24 17:06:14,495 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-24 17:06:14,495 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-24 17:06:14,498 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-24 17:06:14,506 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:06:14,506 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-24 17:06:14,506 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-24 17:06:14,607 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-24 17:06:14,608 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 843 ms
+2023-06-24 17:06:14,767 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-24 17:06:15,146 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:06:15,159 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-24 17:06:15,167 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.799 seconds (JVM running for 2.247)
+2023-06-24 17:06:23,667 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-24 17:06:23,668 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-24 17:06:23,668 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 0 ms
+2023-06-24 17:06:23,736 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-24 17:06:23,861 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-24 17:07:04,068 ERROR  [http-nio-8080-exec-3] (login.java:41)- 请求失败
+2023-06-24 17:07:23,463 ERROR  [http-nio-8080-exec-4] (login.java:41)- 请求失败
+2023-06-24 17:07:59,644 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-24 17:07:59,649 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-24 17:08:11,058 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-24 17:08:11,064 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 12896 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-24 17:08:11,064 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-24 17:08:11,892 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-24 17:08:11,893 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-24 17:08:11,893 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-24 17:08:11,893 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-24 17:08:11,896 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-24 17:08:11,904 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:08:11,905 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-24 17:08:11,905 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-24 17:08:12,012 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-24 17:08:12,013 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 912 ms
+2023-06-24 17:08:12,210 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-24 17:08:12,594 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:08:12,607 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-24 17:08:12,614 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.912 seconds (JVM running for 2.396)
+2023-06-24 17:08:17,395 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-24 17:08:17,395 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-24 17:08:17,396 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 0 ms
+2023-06-24 17:08:17,468 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-24 17:08:17,587 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-24 17:08:20,725 ERROR  [http-nio-8080-exec-3] (login.java:42)- 请求失败
+2023-06-24 17:09:21,607 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-24 17:09:21,612 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-24 17:09:26,079 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-24 17:09:26,087 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 13720 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-24 17:09:26,088 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-24 17:09:26,857 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-24 17:09:26,858 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-24 17:09:26,858 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-24 17:09:26,858 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-24 17:09:26,861 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-24 17:09:26,869 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:09:26,869 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-24 17:09:26,869 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-24 17:09:26,973 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-24 17:09:26,973 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 848 ms
+2023-06-24 17:09:27,140 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-24 17:09:27,532 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:09:27,545 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-24 17:09:27,553 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.831 seconds (JVM running for 2.273)
+2023-06-24 17:09:31,565 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-24 17:09:31,566 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-24 17:09:31,567 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-24 17:09:31,635 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-24 17:09:31,752 INFO  [http-nio-8080-exec-1] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-24 17:09:31,783 ERROR  [http-nio-8080-exec-1] (login.java:42)- 请求失败
+2023-06-24 17:09:41,931 ERROR  [http-nio-8080-exec-2] (login.java:42)- 请求失败
+2023-06-24 17:28:21,735 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-24 17:28:21,744 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-24 17:28:26,283 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-24 17:28:26,290 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 14188 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-24 17:28:26,291 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-24 17:28:27,203 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-24 17:28:27,204 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-24 17:28:27,205 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-24 17:28:27,205 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-24 17:28:27,208 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-24 17:28:27,220 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:28:27,220 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-24 17:28:27,220 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-24 17:28:27,337 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-24 17:28:27,338 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 1009 ms
+2023-06-24 17:28:27,527 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-24 17:28:28,028 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:28:28,042 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-24 17:28:28,050 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 2.154 seconds (JVM running for 2.971)
+2023-06-24 17:29:00,209 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-24 17:29:00,209 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-24 17:29:00,210 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-24 17:29:00,224 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-24 17:29:00,225 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-24 17:29:46,080 INFO  [http-nio-8080-exec-3] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-24 17:29:46,209 INFO  [http-nio-8080-exec-3] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-24 17:30:10,889 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-24 17:30:10,889 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-24 17:32:09,734 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-24 17:32:09,738 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-24 17:32:12,272 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-24 17:32:12,279 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 10128 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-24 17:32:12,279 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-24 17:32:13,127 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-24 17:32:13,127 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-24 17:32:13,127 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-24 17:32:13,128 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-24 17:32:13,132 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-24 17:32:13,139 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:32:13,139 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-24 17:32:13,139 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-24 17:32:13,248 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-24 17:32:13,248 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 928 ms
+2023-06-24 17:32:13,423 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-24 17:32:13,833 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:32:13,848 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-24 17:32:13,857 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.962 seconds (JVM running for 2.561)
+2023-06-24 17:32:30,828 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-24 17:32:30,829 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-24 17:32:30,829 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 0 ms
+2023-06-24 17:32:30,843 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-24 17:32:30,844 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-24 17:32:45,428 INFO  [http-nio-8080-exec-3] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-06-24 17:32:45,565 INFO  [http-nio-8080-exec-3] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-06-24 17:32:45,597 ERROR  [http-nio-8080-exec-3] (login.java:42)- 请求失败
+2023-06-24 17:33:38,077 INFO  [http-nio-8080-exec-7] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-24 17:33:38,078 INFO  [http-nio-8080-exec-7] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-24 17:34:18,496 INFO  [http-nio-8080-exec-9] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-24 17:34:18,497 INFO  [http-nio-8080-exec-9] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-24 17:35:26,251 WARN  [http-nio-8080-exec-1] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53ff83e5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-24 17:35:26,253 WARN  [http-nio-8080-exec-1] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2ded810c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-24 17:35:26,253 WARN  [http-nio-8080-exec-1] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2a2cfff (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-24 17:35:26,254 WARN  [http-nio-8080-exec-1] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@18f0bf0e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-24 17:35:26,255 WARN  [http-nio-8080-exec-1] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@69e3b6c7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-24 17:35:26,256 WARN  [http-nio-8080-exec-1] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2847bf16 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-24 17:35:26,257 WARN  [http-nio-8080-exec-1] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3c0e50d6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-24 17:35:26,258 WARN  [http-nio-8080-exec-1] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@211b8096 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-24 17:35:26,259 WARN  [http-nio-8080-exec-1] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@553a4ffc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-24 17:35:26,259 WARN  [http-nio-8080-exec-1] (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4090e542 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-06-24 17:35:56,252 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-24 17:35:56,252 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-24 17:36:14,874 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:47)- login_check ----posthandle----
+2023-06-24 17:36:14,875 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:48)- 处理完了
+2023-06-24 17:36:14,875 INFO  [http-nio-8080-exec-3] (LoginInterceptor.java:53)- login_check ----afterCompletion----
+2023-06-24 17:36:24,314 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-24 17:36:24,315 INFO  [http-nio-8080-exec-4] (LoginInterceptor.java:30)- login_check 检测token
+2023-06-24 17:36:28,096 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-06-24 17:36:28,099 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-06-24 17:36:32,189 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-06-24 17:36:32,196 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplication using Java 18.0.2 on MAKJEARUYSKCDRG with PID 13116 (C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-06-24 17:36:32,196 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-06-24 17:36:33,038 INFO  [main] (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8080 (http)
+2023-06-24 17:36:33,039 INFO  [main] (DirectJDKLog.java:173)- Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-24 17:36:33,039 INFO  [main] (DirectJDKLog.java:173)- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-06-24 17:36:33,039 INFO  [main] (DirectJDKLog.java:173)- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-06-24 17:36:33,043 INFO  [main] (DirectJDKLog.java:173)- OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-24 17:36:33,050 INFO  [main] (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:36:33,050 INFO  [main] (DirectJDKLog.java:173)- Starting service [Tomcat]
+2023-06-24 17:36:33,050 INFO  [main] (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-24 17:36:33,161 INFO  [main] (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2023-06-24 17:36:33,162 INFO  [main] (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 930 ms
+2023-06-24 17:36:33,329 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-06-24 17:36:33,744 INFO  [main] (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2023-06-24 17:36:33,758 INFO  [main] (TomcatWebServer.java:220)- Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-24 17:36:33,765 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplication in 1.954 seconds (JVM running for 2.542)
+2023-06-24 17:36:37,361 INFO  [http-nio-8080-exec-1] (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-24 17:36:37,362 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-06-24 17:36:37,363 INFO  [http-nio-8080-exec-1] (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-06-24 17:36:37,378 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:29)- login_check ----prehandle----
+2023-06-24 17:36:37,378 INFO  [http-nio-8080-exec-1] (LoginInterceptor.java:30)- login_check 检测token

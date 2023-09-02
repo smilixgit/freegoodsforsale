@@ -1,0 +1,20 @@
+2023-07-01 14:25:00,976 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 20600 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-07-01 14:25:00,979 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-07-01 14:25:00,990 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-07-01 14:25:02,149 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-07-01 14:25:02,277 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HGoods"
+2023-07-01 14:25:03,331 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.759 seconds (JVM running for 3.786)
+2023-07-01 14:25:03,888 INFO  [main] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-07-01 14:25:04,041 INFO  [main] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-07-01 14:25:04,092 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-07-01 14:25:04,100 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-07-01 14:26:59,466 INFO  [main] (StartupInfoLogger.java:55)- Starting YecaoshiApplicationTests using Java 18.0.2 on MAKJEARUYSKCDRG with PID 20776 (started by Administrator in C:\Users\Administrator\IdeaProjects\demo1\Yecaoshi)
+2023-07-01 14:26:59,467 INFO  [main] (SpringApplication.java:631)- No active profile set, falling back to 1 default profile: "default"
+2023-07-01 14:26:59,474 INFO  [background-preinit] (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-07-01 14:27:00,504 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HUser"
+2023-07-01 14:27:00,606 WARN  [main] (TableInfoHelper.java:423)- This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.yecaoshi.pojo.HGoods"
+2023-07-01 14:27:01,481 INFO  [main] (StartupInfoLogger.java:61)- Started YecaoshiApplicationTests in 2.374 seconds (JVM running for 3.307)
+2023-07-01 14:27:01,951 INFO  [main] (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-07-01 14:27:02,096 INFO  [main] (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-07-01 14:27:02,169 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-07-01 14:27:02,176 INFO  [SpringApplicationShutdownHook] (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
