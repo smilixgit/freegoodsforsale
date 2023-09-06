@@ -1,10 +1,10 @@
 package com.example.yecaoshi.interC;
 
 import com.alibaba.fastjson.JSON;
-import com.auth0.jwt.exceptions.JWTDecodeException;
-import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.example.yecaoshi.pojo.resp;
-import com.example.yecaoshi.util.JwtUtil;
+import com.auth0.jwt.interfaces.DecodedJWT;
+import com.example.yecaoshi.pojo.Resp;
+
+import com.example.yecaoshi.util.JWTUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -20,20 +20,26 @@ import java.util.Objects;
 @Slf4j
 public class LoginInterceptor implements HandlerInterceptor {
     @Autowired
-    private resp resp;
+    private Resp resp;
     @Autowired
-    private JwtUtil jwtUtil;
+    private JWTUtils jwtUtil;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         log.info("login_check ----prehandle----");
         log.info("login_check 检测token");
+        System.out.println("检测token开始");
         //检测token
         String utoken = request.getHeader("Authorization");
+        if(utoken==null || utoken.equals("null"))
+        {
+            returnError(response,"请重新登录");
+            return false;
+        }
         System.out.println(utoken);
-        String cc= JwtUtil.validateToken(utoken);
+        DecodedJWT cc = jwtUtil.verify(utoken);
         System.out.println(cc);
-        if (utoken == null || Objects.equals(cc, "")) {
+        if (cc.getClaim("mobile") == null) {
 
             returnError(response,"请重新登录");
             return false;
@@ -57,7 +63,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json; charset=utf-8");
         try (PrintWriter writer = response.getWriter()) {
-            resp.setCode(0);
+            resp.setCode(10001);
             resp.setMsg(msg);
             resp.setData(null);
             writer.print(JSON.toJSONString(resp));

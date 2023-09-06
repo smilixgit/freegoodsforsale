@@ -6,8 +6,8 @@ import com.example.yecaoshi.mapper.HGoodsMapper;
 import com.example.yecaoshi.mapper.HUserMapper;
 import com.example.yecaoshi.pojo.HGoods;
 import com.example.yecaoshi.pojo.HUser;
-import com.example.yecaoshi.pojo.resp;
-import com.example.yecaoshi.util.JwtUtil;
+import com.example.yecaoshi.pojo.Resp;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,9 +21,8 @@ class YecaoshiApplicationTests {
     @Autowired
     private HUserMapper hUserMapper;
     @Autowired
-    private resp resp;
-    @Autowired
-    private JwtUtil jwtUtil;
+    private Resp resp;
+
 
     @Test
     void goo()
@@ -62,7 +61,9 @@ class YecaoshiApplicationTests {
     }
     @Test
     void cscs() throws Exception {
-
+        HUser ccs=new HUser();
+        ccs.setPhone("352345234");
+        System.out.println(hUserMapper.insert(ccs));
     }
 }
 

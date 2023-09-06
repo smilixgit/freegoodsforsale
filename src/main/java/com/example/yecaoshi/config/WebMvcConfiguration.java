@@ -18,6 +18,6 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
         registry
                 //拦截器注册
                 .addInterceptor(getLoginInterceptor())
-                .addPathPatterns("/privateB/**");
+                .addPathPatterns("/goods/**");
     }
 }

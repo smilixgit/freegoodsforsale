@@ -1,12 +1,11 @@
 package com.example.yecaoshi.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.yecaoshi.mapper.HUserMapper;
 import com.example.yecaoshi.pojo.HUser;
-import com.example.yecaoshi.pojo.resp;
-import com.example.yecaoshi.util.JwtUtil;
+import com.example.yecaoshi.pojo.Resp;
+import com.example.yecaoshi.util.JWTUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,33 +23,33 @@ public class privateB {
     @Autowired
     private HUserMapper hUserMapper;
     @Autowired
-    private com.example.yecaoshi.pojo.resp resp;
+    private Resp resp;
     @Autowired
-    private JwtUtil jwtUtil;
+    private JWTUtils jwtUtil;
 
-    @RequestMapping("getAccount")
-    @ResponseBody
-    public String getUserinfo(HttpServletRequest request) throws Exception {
-
-        Map user=this.decryptJwt(request);
-        QueryWrapper<HUser> queryWrapper=new QueryWrapper<>();
-        queryWrapper
-                .eq("id",user.get("id"));
-        HUser hUser=hUserMapper.selectOne(queryWrapper);
-        resp.setCode(1);
-        resp.setMsg("加载用户信息成功");
-        resp.setData(hUser);
-        resp.setToken(null);
-        return JSON.toJSONString(resp);
-
-    }
-    public Map decryptJwt(HttpServletRequest request) throws Exception {
-        String utoken = request.getHeader("Authorization");
-
-        String usermsg= JwtUtil.validateToken(utoken);
-
-        Map user=new HashMap();
-        user=JSON.parseObject(usermsg);
-        return user;
-    }
+//    @RequestMapping("getAccount")
+//    @ResponseBody
+//    public String getUserinfo(HttpServletRequest request) throws Exception {
+//
+//        Map user=this.decryptJwt(request);
+//        QueryWrapper<HUser> queryWrapper=new QueryWrapper<>();
+//        queryWrapper
+//                .eq("id",user.get("id"));
+//        HUser hUser=hUserMapper.selectOne(queryWrapper);
+//        resp.setCode(1);
+//        resp.setMsg("加载用户信息成功");
+//        resp.setData(hUser);
+//        resp.setToken(null);
+//        return JSON.toJSONString(resp);
+//
+//    }
+   // public Map decryptJwt(HttpServletRequest request) throws Exception {
+//        String utoken = request.getHeader("Authorization");
+//
+////        String usermsg= jwtUtil.verify(utoken);
+//
+//        Map user=new HashMap();
+//        user=JSON.parseObject(usermsg);
+//        return user;
+   // }
 }
