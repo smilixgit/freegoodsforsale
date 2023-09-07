@@ -3,8 +3,10 @@ package com.example.yecaoshi;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.yecaoshi.mapper.HGoodsMapper;
+import com.example.yecaoshi.mapper.HOrderMapper;
 import com.example.yecaoshi.mapper.HUserMapper;
 import com.example.yecaoshi.pojo.HGoods;
+import com.example.yecaoshi.pojo.HOrder;
 import com.example.yecaoshi.pojo.HUser;
 import com.example.yecaoshi.pojo.Resp;
 
@@ -20,6 +22,8 @@ class YecaoshiApplicationTests {
     private HGoodsMapper hGoodsMapper;
     @Autowired
     private HUserMapper hUserMapper;
+    @Autowired
+    private HOrderMapper hOrderMapper;
     @Autowired
     private Resp resp;
 
@@ -61,9 +65,9 @@ class YecaoshiApplicationTests {
     }
     @Test
     void cscs() throws Exception {
-        HUser ccs=new HUser();
-        ccs.setPhone("352345234");
-        System.out.println(hUserMapper.insert(ccs));
+            HOrder orderList=hOrderMapper.selectById(2);
+        System.out.println(orderList.toString());
+
     }
 }
 

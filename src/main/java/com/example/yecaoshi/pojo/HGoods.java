@@ -16,7 +16,7 @@ public class HGoods {
   private long groups;
   private String goodsName;
   private String goodsTitle;
-  private String goodsSign;
+  private String goodsUrl;
   private double minGroupPrice;
   private double groupAfterQuan;
   private double freePrice;
@@ -100,12 +100,12 @@ public class HGoods {
   }
 
 
-  public String getGoodsSign() {
-    return goodsSign;
+  public String getGoodsUrl() {
+    return goodsUrl;
   }
 
-  public void setGoodsSign(String goodsSign) {
-    this.goodsSign = goodsSign;
+  public void setGoodsUrl(String goodsUrl) {
+    this.goodsUrl = goodsUrl;
   }
 
 
