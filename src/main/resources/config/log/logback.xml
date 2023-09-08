@@ -70,6 +70,28 @@
             <onMismatch>DENY</onMismatch>
         </filter>
     </appender>
+    <!--同步订单日志-->
+    <appender name="importorderFile"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>log/error/importorderFile.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/error/importorderFile.%d.log.%i</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>64 MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %d %p  [%thread] (%file:%line\)- %m%n
+            </pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
     <!--  日志输出级别 -->
     <!--All\DEBUG\INFO\WARN\ERROR\FATAL\OFF-->
     <!--打印info级别日志，分别在控制台，fileLog，errorFile输出

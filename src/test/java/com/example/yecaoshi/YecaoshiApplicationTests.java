@@ -14,6 +14,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 @SpringBootTest
@@ -65,9 +66,15 @@ class YecaoshiApplicationTests {
     }
     @Test
     void cscs() throws Exception {
-            HOrder orderList=hOrderMapper.selectById(2);
-        System.out.println(orderList.toString());
-
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
+        Date date1 = new Date();
+        Date date2=new Date(date1.getTime()-1000*30);
+        System.out.println(date1.getTime());
+        System.out.println(date1);
+        String date = df.format(date1);// new Date()为获取当前系统时间，也可使用当前时间戳
+        String  ff=df.format(date2);
+        System.out.println(date);
+        System.out.println(ff);
     }
 }
 

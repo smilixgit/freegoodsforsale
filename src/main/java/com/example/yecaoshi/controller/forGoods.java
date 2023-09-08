@@ -2,6 +2,7 @@ package com.example.yecaoshi.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.example.yecaoshi.control.OrderControl;
 import com.example.yecaoshi.mapper.HGoodsMapper;
 import com.example.yecaoshi.pojo.HGoods;
 import com.example.yecaoshi.pojo.Resp;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -37,6 +39,8 @@ public class forGoods {
     private CommonUtil commonUtil;
     @Autowired
     private RedisUtil redisUtil;
+    @Autowired
+    private OrderControl orderControl;
     @RequestMapping("getDouGoods")
     @ResponseBody
     public String getAllGoods()
@@ -72,7 +76,7 @@ public class forGoods {
         try {
             List<Long> longList = new ArrayList<>();
             longList.add(Long.valueOf(orderid));
-            rdata = douyinAPI.getProductDetail(longList);
+            rdata = douyinAPI.api_getProductDetail(longList);
         } catch (Exception exception) {
             resp.setCode(0);
             resp.setMsg("获取商品信息出错");
@@ -96,8 +100,14 @@ public class forGoods {
         resp.setCode(1);
 
         resp.setToken(null);
-        resp.setData(douyinAPI.getDouKouLing(requestReq.get("goods_url").toString(),ext_info));
+        resp.setData(douyinAPI.api_getDouKouLing(requestReq.get("goods_url").toString(),ext_info));
         resp.setMsg("转链成功");
         return JSON.toJSONString(resp);
+    }
+    @PostMapping("ceshiyong")
+    @ResponseBody
+    public String ceshiyong() throws ParseException {
+        orderControl.getOrderByTimeRange();
+        return "ccccc";
     }
 }
