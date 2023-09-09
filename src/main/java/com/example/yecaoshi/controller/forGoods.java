@@ -107,7 +107,7 @@ public class forGoods {
     @PostMapping("ceshiyong")
     @ResponseBody
     public String ceshiyong() throws ParseException {
-        orderControl.getOrderByTimeRange();
+        orderControl.con_getOrderByTimeRange();
         return "ccccc";
     }
 }

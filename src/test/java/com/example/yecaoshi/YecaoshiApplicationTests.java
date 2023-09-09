@@ -65,16 +65,12 @@ class YecaoshiApplicationTests {
         System.out.println(AllGoods);
     }
     @Test
-    void cscs() throws Exception {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
-        Date date1 = new Date();
-        Date date2=new Date(date1.getTime()-1000*30);
-        System.out.println(date1.getTime());
-        System.out.println(date1);
-        String date = df.format(date1);// new Date()为获取当前系统时间，也可使用当前时间戳
-        String  ff=df.format(date2);
-        System.out.println(date);
-        System.out.println(ff);
+    void cscs()  {
+        String externalInfo="uid_3_gid_1";
+        String mid_ext=externalInfo.toString();
+        String []mid_extlist=mid_ext.split("_");
+        for(String j : mid_extlist)
+            System.out.println(j);
     }
 }
 

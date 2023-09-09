@@ -29,6 +29,7 @@ public class DouyinAPI {
     @Autowired
     RedisUtil redisUtil;
     public final String Pid="dy_107216596770402681125_28644_3390673480";
+
     static {
         GlobalConfig.initAppKey("7182174365499278907");
         GlobalConfig.initAppSecret("d9d3ba49-121c-4c27-9d48-714a8ffb67fb");
@@ -102,6 +103,21 @@ public class DouyinAPI {
         accessTokenData.setRefreshToken("3bd7cb7f-3477-4966-a8e8-c5ca224b4e59");
         accessToken.setData(accessTokenData);
         return AccessTokenBuilder.refresh(accessToken);
+    }
+    public BuyinDoukeOrderAdsResponse api_getOrderDetailById(String orderId)
+    {
+        AccessToken accessToken=api_getAccessByAnno();
+        BuyinDoukeOrderAdsRequest request = new BuyinDoukeOrderAdsRequest();
+        BuyinDoukeOrderAdsParam param = request.getParam();
+        param.setSize(200L);
+        param.setCursor("0");
+
+        param.setOrderIds(orderId);
+        param.setPid(Pid);
+        param.setTimeType("update");
+
+        BuyinDoukeOrderAdsResponse response = request.execute(accessToken);
+        return response;
     }
 
 
