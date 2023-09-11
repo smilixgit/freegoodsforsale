@@ -67,7 +67,7 @@ public class DouyinAPI {
 
     }
 
-    public String api_getOrderByTimeRange(String start_time,String end_time,String cursor)
+    public List<OrdersItem> api_getOrderByTimeRange(String start_time, String end_time, String cursor)
     {
 
         AccessToken accessToken = api_getAccessByAnno();
@@ -88,7 +88,7 @@ public class DouyinAPI {
 
         BuyinDoukeOrderAdsResponse response = request.execute(accessToken);
         List<OrdersItem> orders = response.getData().getOrders();
-        return orders.toString();
+        return orders;
     }
     public AccessToken api_getAccessByAnno()
     {

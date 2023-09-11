@@ -10,13 +10,13 @@ import java.io.Serializable;
 @Repository
 public interface HOrderMapper extends BaseMapper<HOrder> {
 
-  default boolean selectByOrderNo(String orderNo)
+  default HOrder selectByOrderNo(String orderNo)
   {
       QueryWrapper<HOrder> queryWrapper=new QueryWrapper<>();
       queryWrapper
               .eq("order_no",orderNo);
       HOrder hOrder=selectOne(queryWrapper);
-      return hOrder != null;
+      return hOrder;
   }
 
 }

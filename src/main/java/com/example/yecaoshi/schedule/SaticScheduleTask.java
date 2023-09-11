@@ -1,5 +1,6 @@
 package com.example.yecaoshi.schedule;
 
+import com.doudian.open.api.buyin_doukeOrderAds.data.OrdersItem;
 import com.example.yecaoshi.control.OrderControl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,8 @@ import org.springframework.scheduling.annotation.Scheduled;
 
 import java.text.ParseException;
 import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.List;
 
 @Configuration      //1.主要用于标记配置类，兼备Component的效果。
 @EnableScheduling   // 2.开启定时任务
@@ -23,6 +26,10 @@ public class SaticScheduleTask {
     private void configureTasks() throws ParseException {
         System.err.println("执行静态定时任务时间: " + LocalDateTime.now());
         log.info("执行静态定时任务时间: " + LocalDateTime.now());
-        System.out.println(orderControl.con_getOrderByTimeRange());
+        Date end = new Date();
+        Date start=new Date(end.getTime()-1000*30);
+        List<OrdersItem> ordersItems = orderControl.con_getOrderByTimeRange(start, end);
+        for(OrdersItem ordersItem:ordersItems )
+            orderControl.con_handleDouOrder(ordersItem);
     }
 }

@@ -43,7 +43,7 @@ public class forGoods {
     private OrderControl orderControl;
     @RequestMapping("getDouGoods")
     @ResponseBody
-    public String getAllGoods()
+    public String web_getAllGoods()
     {
         List<HGoods> AllGoods=null;
         try {
@@ -69,7 +69,7 @@ public class forGoods {
     }
     @RequestMapping("getGoodsDetail")
     @ResponseBody
-    public String getGoodsDetail(@RequestParam(value = "goodsid",required = true)String orderid) {
+    public String web_getGoodsDetail(@RequestParam(value = "goodsid",required = true)String orderid) {
 
 
         String rdata;
@@ -94,7 +94,7 @@ public class forGoods {
 
     @PostMapping("getDycode")
     @ResponseBody
-    public String getDoukouling(HttpServletRequest request) throws IOException {
+    public String web_getDoukouling(HttpServletRequest request) throws IOException {
         Map requestReq = commonUtil.handleHttpServletRequestReq(request);
         String ext_info="uid_"+requestReq.get("uid").toString()+"_gid_"+requestReq.get("id").toString();
         resp.setCode(1);
@@ -107,7 +107,7 @@ public class forGoods {
     @PostMapping("ceshiyong")
     @ResponseBody
     public String ceshiyong() throws ParseException {
-        orderControl.con_getOrderByTimeRange();
+
         return "ccccc";
     }
 }
