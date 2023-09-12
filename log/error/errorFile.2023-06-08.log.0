@@ -128,7 +128,7 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
 	... 101 common frames omitted
-2023-06-08 14:02:49,193 ERROR  [http-nio-8080-exec-1] (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+2023-06-08 14:02:49,193 ERROR  [http-nio-8080-exec-1] (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException:
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -253,7 +253,7 @@ java.net.ConnectException: Connection refused: no further information
 2023-06-08 15:43:15,835 ERROR  [http-nio-8080-exec-1] (login.java:38)- 请求失败
 2023-06-08 15:43:15,911 ERROR  [http-nio-8080-exec-1] (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.ModelAndView.addObject(String, Object)" because "modelAndView" is null] with root cause
 java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.ModelAndView.addObject(String, Object)" because "modelAndView" is null
-	at com.example.yecaoshi.interC.LoginInterceptor.postHandle(LoginInterceptor.java:25)
+	at com.example.yecaoshi.interC.customerLoginInterceptor.postHandle(LoginInterceptor.java:25)
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPostHandle(HandlerExecutionChain.java:165)
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1078)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
@@ -298,7 +298,7 @@ java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.M
 2023-06-08 15:49:26,075 ERROR  [http-nio-8080-exec-1] (login.java:38)- 请求失败
 2023-06-08 15:49:45,084 ERROR  [http-nio-8080-exec-2] (login.java:38)- 请求失败
 2023-06-08 15:57:31,429 ERROR  [http-nio-8080-exec-4] (login.java:38)- 请求失败
-2023-06-08 17:58:38,688 ERROR  [http-nio-8080-exec-3] (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+2023-06-08 17:58:38,688 ERROR  [http-nio-8080-exec-3] (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException:
 ### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist
 ### The error may exist in com/example/yecaoshi/mapper/HUserMapper.java (best guess)
 ### The error may involve defaultParameterMap
@@ -396,7 +396,7 @@ java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2023-06-08 17:58:58,935 ERROR  [http-nio-8080-exec-1] (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+2023-06-08 17:58:58,935 ERROR  [http-nio-8080-exec-1] (DirectJDKLog.java:175)- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException:
 ### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'mp.h_user' doesn't exist
 ### The error may exist in com/example/yecaoshi/mapper/HUserMapper.java (best guess)
 ### The error may involve defaultParameterMap

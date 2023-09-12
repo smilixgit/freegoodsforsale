@@ -3,6 +3,7 @@ package com.example.yecaoshi.controller;
 import com.doudian.open.api.buyin_doukeOrderAds.BuyinDoukeOrderAdsResponse;
 import com.doudian.open.api.buyin_doukeOrderAds.data.OrdersItem;
 import com.example.yecaoshi.control.OrderControl;
+import com.example.yecaoshi.mapper.HAdminMapper;
 import com.example.yecaoshi.mapper.HGoodsMapper;
 import com.example.yecaoshi.mapper.HUserMapper;
 import com.example.yecaoshi.pojo.Resp;
@@ -36,6 +37,8 @@ public class forOrder {
     private RedisUtil redisUtil;
     @Autowired
     private OrderControl orderControl;
+    @Autowired
+    private HAdminMapper hAdminMapper;
     @PostMapping("orderDetail")
     @ResponseBody
     public String web_getOrderDetail(@RequestParam(value = "orderId")String orderid) throws ParseException {
