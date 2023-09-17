@@ -30,6 +30,7 @@ public class PointBillControl {
                 hPointBill.setNumber(amount);
                 hPointBill.setStatus(1);
                 hPointBill.setEnd(begin_balance+amount);//领取补贴入账
+                break;
             //违规操作扣取补贴
             case 0:
                 hPointBill.setUid(uid);
@@ -40,6 +41,7 @@ public class PointBillControl {
                 hPointBill.setNumber(amount);
                 hPointBill.setStatus(1);
                 hPointBill.setEnd(begin_balance+amount);
+                break;
 
         }
         if(hPointBillMapper.insert(hPointBill)==0)

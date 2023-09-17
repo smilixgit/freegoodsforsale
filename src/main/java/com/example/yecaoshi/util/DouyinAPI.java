@@ -1,6 +1,9 @@
 package com.example.yecaoshi.util;
 
 
+import com.doudian.open.api.alliance_materialsProductsSearch.AllianceMaterialsProductsSearchRequest;
+import com.doudian.open.api.alliance_materialsProductsSearch.AllianceMaterialsProductsSearchResponse;
+import com.doudian.open.api.alliance_materialsProductsSearch.param.AllianceMaterialsProductsSearchParam;
 import com.doudian.open.api.buyin_doukeOrderAds.BuyinDoukeOrderAdsRequest;
 import com.doudian.open.api.buyin_doukeOrderAds.BuyinDoukeOrderAdsResponse;
 import com.doudian.open.api.buyin_doukeOrderAds.data.OrdersItem;
@@ -10,6 +13,8 @@ import com.doudian.open.api.buyin_kolProductShare.BuyinKolProductShareResponse;
 import com.doudian.open.api.buyin_kolProductShare.param.BuyinKolProductShareParam;
 import com.doudian.open.api.buyin_kolProductsDetail.BuyinKolProductsDetailRequest;
 import com.doudian.open.api.buyin_kolProductsDetail.BuyinKolProductsDetailResponse;
+import com.doudian.open.api.buyin_kolProductsDetail.data.BaseInfo;
+import com.doudian.open.api.buyin_kolProductsDetail.data.CouponInfo;
 import com.doudian.open.api.buyin_kolProductsDetail.param.BuyinKolProductsDetailParam;
 import com.doudian.open.api.token.AccessTokenData;
 import com.doudian.open.core.AccessToken;
@@ -19,7 +24,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @Component
@@ -35,7 +42,7 @@ public class DouyinAPI {
         GlobalConfig.initAppSecret("d9d3ba49-121c-4c27-9d48-714a8ffb67fb");
 
     }
-    public String api_getProductDetail(List<Long> goodsIdList)
+    public Map api_getProductDetail(List<Long> goodsIdList)
     {
         //到redis中拿code，
         AccessToken accessToken = api_getAccessByAnno();
@@ -47,8 +54,12 @@ public class DouyinAPI {
         param.setProductIds(goodsIdList);
         param.setFields("base_info, promotion_info");
         BuyinKolProductsDetailResponse response = request.execute(accessToken);
-        String detailUrl = response.getData().getProducts().get(0).getBaseInfo().getDetailUrl();
-        return detailUrl;
+        BaseInfo baseInfo = response.getData().getProducts().get(0).getBaseInfo();
+        CouponInfo couponInfo = response.getData().getProducts().get(0).getCouponInfo();
+        Map Rmap=new HashMap();
+        Rmap.put("baseinfo",baseInfo);
+        Rmap.put("couponinfo",couponInfo);
+        return Rmap;
     }
     public String api_getDouKouLing(String pro_url, String ext_info)
     {
@@ -99,8 +110,8 @@ public class DouyinAPI {
         */
         AccessToken accessToken=new AccessToken();
         AccessTokenData accessTokenData=new AccessTokenData();
-        accessTokenData.setAccessToken("3ef31529-d74c-49ce-abf8-0bec3ed3c506");
-        accessTokenData.setRefreshToken("3bd7cb7f-3477-4966-a8e8-c5ca224b4e59");
+        accessTokenData.setAccessToken("b1761541-b507-4415-99be-318b312c050d");
+        accessTokenData.setRefreshToken("5de94660-2c5e-4369-a211-729b965d34f8");
         accessToken.setData(accessTokenData);
         return AccessTokenBuilder.refresh(accessToken);
     }
@@ -119,6 +130,38 @@ public class DouyinAPI {
         BuyinDoukeOrderAdsResponse response = request.execute(accessToken);
         return response;
     }
+    //检索精选联盟商品
+    public AllianceMaterialsProductsSearchResponse getJingXuanGoods(String title)
+    {
+        AccessToken accessToken=api_getAccessByAnno();
+        AllianceMaterialsProductsSearchRequest request = new AllianceMaterialsProductsSearchRequest();
+        AllianceMaterialsProductsSearchParam param = request.getParam();
+        param.setTitle(title);
 
+        param.setPriceMin(1);
+        param.setPriceMax(1000);
+        param.setSellNumMin(0);
+        param.setSellNumMax(1000);
+        param.setSearchType(3);
+        param.setSortType(1);
+        param.setCosFeeMin(1);
+        param.setCosFeeMax(50);
+        param.setCosRatioMin(1);
+        param.setCosRatioMax(15);
+        param.setPage(1L);
+        param.setPageSize(10L);
+        param.setShareStatus(1);
+
+
+        AllianceMaterialsProductsSearchResponse response = request.execute(accessToken);
+        return  response;
+    }
+    public void getAcByCode()
+    {
+        AccessToken accessToken= AccessTokenBuilder.build("a183851b-f871-4eaa-aeb3-ce6c984ee17b");  //16dde1a3-2d6f-4946-aef2-afbd29d2eb92是code
+        System.out.println(accessToken.getRefreshToken());
+        System.out.println(accessToken.getData().getAccessToken());
+        System.out.println("测试");
+    }
 
 }

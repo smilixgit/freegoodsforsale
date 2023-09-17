@@ -16,10 +16,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
     public adminLoginInterceptor getAdminLoginInterceptor(){ return new adminLoginInterceptor();}
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry
-                //拦截器注册
-                .addInterceptor(getLoginInterceptor())
-                .addPathPatterns("/goods/**");
+
 
     }
 }

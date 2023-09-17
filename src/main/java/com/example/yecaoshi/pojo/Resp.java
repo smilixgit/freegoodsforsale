@@ -32,9 +32,18 @@ public class Resp {
     public Resp returnFail(String msg)
     {
         Resp sucResp=new Resp();
-        sucResp.setCode(10000);
+        sucResp.setCode(401);
         sucResp.setMsg(msg);
         sucResp.setData(null);
+        sucResp.setToken(null);
+        return sucResp;
+    }
+    public Resp returnSuccessWithData(Object data)
+    {
+        Resp sucResp=new Resp();
+        sucResp.setCode(0);
+        sucResp.setMsg("加载成功");
+        sucResp.setData(data);
         sucResp.setToken(null);
         return sucResp;
     }

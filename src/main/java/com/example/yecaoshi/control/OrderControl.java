@@ -12,7 +12,9 @@ import com.example.yecaoshi.util.DouyinAPI;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -61,29 +63,33 @@ public class OrderControl {
 
       switch (order.getFlowPoint()) {
         case "PAY_SUCC":
-          hOrder.setStatus(1l);
-          hOrder.setOrderStatus(1l);
+          hOrder_local.setStatus(1l);
+          hOrder_local.setOrderStatus(1l);
+          break;
         case "REFUND":
-          hOrder.setStatus(4l);
-          hOrder.setOrderStatus(4l);
-          hOrder.setReasonFailure("审核失败:订单退款");
+          hOrder_local.setStatus(4l);
+          hOrder_local.setOrderStatus(4l);
+          hOrder_local.setReasonFailure("审核失败:订单退款");
+          break;
         case "CONFIRM":
-          hOrder.setStatus(2l);
-          hOrder.setOrderStatus(2l);
+          hOrder_local.setStatus(2l);
+          hOrder_local.setOrderStatus(2l);
+          break;
           //一个月不体现。默认体现过了
         case "SETTLE":
-          hOrder.setStatus(2l);
-          hOrder.setOrderStatus(3l);
+          hOrder_local.setStatus(2l);
+          hOrder_local.setOrderStatus(3l);
+          break;
       }
       if (order.getConfirmTime() != null) {
-        hOrder.setOrderReceiveTime(Long.parseLong(order.getConfirmTime()));
+        hOrder_local.setOrderReceiveTime(Long.parseLong(order.getConfirmTime()));
       }
       //如果体现了之后退款了，扣除回来，用到账单表
       if (Objects.equals(order.getFlowPoint(), "REFUND")) {
         //如果该用户提取了返利，扣除该笔返利
         if (hOrder_local.getIsFanli() == 1L) {
           HUser hUser = hUserMapper.selectById(hOrder.getUid());
-          if (!pointBillControl.updataUserBill(hOrder_local.getUid(), 0, -(hOrder.getFreePrice()), hUser.getBalance(), Long.parseLong(hOrder_local.getOrderNo()))) {
+          if (!pointBillControl.updataUserBill(hOrder_local.getUid(), 0, -(hOrder_local.getFreePrice()), hUser.getBalance(), Long.parseLong(hOrder_local.getOrderNo()))) {
             log.error(hOrder_local.getOrderNo() + "-号订单扣除返利失败，原因：领取补贴后退款");
 
           } else {
@@ -93,12 +99,14 @@ public class OrderControl {
 
         }
       }
-
+      hOrder_local.setPId(0l);
+      hOrderMapper.updateById(hOrder_local);
       return true;
 
     } else {
       Long uid = 0l;
       Long gid = 0l;
+      DecimalFormat df=new DecimalFormat("0.00");//设置保留位数
       String externalInfo = order.getPidInfo().getExternalInfo();
       String mid_ext = externalInfo.toString();
 
@@ -123,8 +131,8 @@ public class OrderControl {
       hOrder.setGoodsName(order.getProductName());
       hOrder.setGoodsThumbnailUrl(order.getProductImg());
       //最小成团价
-      hOrder.setMinGroupPrice(order.getTotalPayAmount() / 100);
-      hOrder.setGroupPrice(order.getTotalPayAmount() / 100);
+      hOrder.setMinGroupPrice(Double.valueOf(df.format((float)order.getTotalPayAmount()/100)));
+      hOrder.setGroupPrice(Double.valueOf(df.format((float)order.getTotalPayAmount()/100)));
       //获取返利价格
       Map searchGood = new HashMap();
       searchGood.put("id", gid);
@@ -133,24 +141,28 @@ public class OrderControl {
         log.error(order.getOrderId() + "-号订单出错，订单gid-" + gid + "-不存在");
         return false;
       }
-
+     hOrder.setPId(1l);
       hOrder.setFreePrice(list.get(0).getFreePrice());
       hOrder.setGoodsQuantity(order.getItemNum());
-      hOrder.setStatus(1l);
+     hOrder.setStatus(1l);
       switch (order.getFlowPoint()) {
         case "PAY_SUCC":
           hOrder.setStatus(1l);
           hOrder.setOrderStatus(1l);
+          break;
         case "REFUND":
           hOrder.setStatus(4l);
           hOrder.setOrderStatus(4l);
           hOrder.setReasonFailure("审核失败:订单退款");
+          break;
         case "CONFIRM":
           hOrder.setStatus(2l);
           hOrder.setOrderStatus(2l);
+          break;
         case "SETTLE":
           hOrder.setStatus(2l);
           hOrder.setOrderStatus(3l);
+          break;
       }
       if (list.get(0).getFreePrice() * 100 < order.getTotalPayAmount()) {
         hOrder.setStatus(4l);

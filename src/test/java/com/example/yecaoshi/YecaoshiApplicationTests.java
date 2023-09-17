@@ -2,6 +2,8 @@ package com.example.yecaoshi;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.doudian.open.api.buyin_doukeOrderAds.BuyinDoukeOrderAdsResponse;
+import com.example.yecaoshi.control.OrderControl;
 import com.example.yecaoshi.mapper.HGoodsMapper;
 import com.example.yecaoshi.mapper.HOrderMapper;
 import com.example.yecaoshi.mapper.HUserMapper;
@@ -10,10 +12,12 @@ import com.example.yecaoshi.pojo.HOrder;
 import com.example.yecaoshi.pojo.HUser;
 import com.example.yecaoshi.pojo.Resp;
 
+import com.example.yecaoshi.util.DouyinAPI;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -27,6 +31,8 @@ class YecaoshiApplicationTests {
     private HOrderMapper hOrderMapper;
     @Autowired
     private Resp resp;
+    @Autowired
+    OrderControl control;
 
 
     @Test
@@ -65,12 +71,17 @@ class YecaoshiApplicationTests {
         System.out.println(AllGoods);
     }
     @Test
-    void cscs()  {
-        String externalInfo="uid_3_gid_1";
-        String mid_ext=externalInfo.toString();
-        String []mid_extlist=mid_ext.split("_");
-        for(String j : mid_extlist)
-            System.out.println(j);
+    void cscs() throws ParseException {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        long todayZeroTimestamp = calendar.getTimeInMillis();
+        System.out.println("今天零点的时间戳：" + todayZeroTimestamp);
+
+
+
     }
 }
 

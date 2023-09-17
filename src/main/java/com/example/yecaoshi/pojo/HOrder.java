@@ -11,7 +11,7 @@ public class HOrder {
   @TableId(value = "id", type = IdType.AUTO)
   private long id;
   private long uid;
-  private String pId;
+  private long pId;
   private long merId;
   private long gid;
   private long groups;
@@ -26,7 +26,7 @@ public class HOrder {
   private long goodsQuantity;
   private long status;
   private long orderStatus;
-  private String pid;
+
   private String zsDuoId;
   private long isFanli;
   private long isMerTh;
@@ -62,11 +62,11 @@ public class HOrder {
   }
 
 
-  public String getPId() {
+  public  long getPId() {
     return pId;
   }
 
-  public void setPId(String pId) {
+  public void setPId( long pId) {
     this.pId = pId;
   }
 
@@ -197,13 +197,7 @@ public class HOrder {
   }
 
 
-  public String getPid() {
-    return pid;
-  }
 
-  public void setPid(String pid) {
-    this.pid = pid;
-  }
 
 
   public String getZsDuoId() {

@@ -49,7 +49,7 @@ public class forAdmin {
     private HAdminMapper hAdminMapper;
     @PostMapping("checklogin")
     @ResponseBody
-    public String checllogin(HttpServletRequest request,HttpServletResponse response) throws Exception {
+    public String checllogin(HttpServletRequest request) throws Exception {
 
         Map Req_param=commonUtil.handleHttpServletRequestReq(request);
         //检查用户的电话号码和验证码是否正确
