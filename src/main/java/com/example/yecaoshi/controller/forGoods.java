@@ -2,6 +2,8 @@ package com.example.yecaoshi.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.doudian.open.api.alliance_materialsProductsSearch.AllianceMaterialsProductsSearchResponse;
+import com.doudian.open.api.alliance_materialsProductsSearch.data.ProductsItem;
 import com.example.yecaoshi.control.OrderControl;
 import com.example.yecaoshi.mapper.HGoodsMapper;
 import com.example.yecaoshi.pojo.HGoods;
@@ -226,5 +228,24 @@ public class forGoods {
 
 
 
+    }
+    @PostMapping("filterGoodFromDouyin")
+    @ResponseBody
+    public String filterGoodFromDouyin(HttpServletRequest request) throws IOException {
+        Map Req_param= (Map) commonUtil.handleHttpServletRequestReq(request).get("filterForm");
+        String goodsname = Req_param.get("goodsname").toString();
+        //前端处理一些检查用户输入的东西，不再耗费后端资源检查输入
+        int numMinPrice = Integer.parseInt(Req_param.get("numMinPrice").toString());
+        int numMaxPrice = Integer.parseInt(Req_param.get("numMaxPrice").toString());
+        int numMinCos = Integer.parseInt(Req_param.get("numMinCos").toString());
+        int numMaxCos = Integer.parseInt(Req_param.get("numMaxCos").toString());
+        int numMinCosFee = Integer.parseInt(Req_param.get("numMinCosFee").toString());
+        int numMaxCosFee = Integer.parseInt(Req_param.get("numMaxCosFee").toString());
+        int page = Integer.parseInt(Req_param.get("page").toString());
+        //根据什么排序
+        int sort = Integer.parseInt(Req_param.get("sort").toString());
+        Map jingXuanGoods = douyinAPI.getJingXuanGoods(goodsname, numMinPrice, numMaxPrice, numMinCos, numMaxCos, numMinCosFee, numMaxCosFee, sort, page);
+
+        return JSON.toJSONString(resp.returnSuccessWithData(jingXuanGoods));
     }
 }

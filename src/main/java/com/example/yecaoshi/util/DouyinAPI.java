@@ -3,6 +3,7 @@ package com.example.yecaoshi.util;
 
 import com.doudian.open.api.alliance_materialsProductsSearch.AllianceMaterialsProductsSearchRequest;
 import com.doudian.open.api.alliance_materialsProductsSearch.AllianceMaterialsProductsSearchResponse;
+import com.doudian.open.api.alliance_materialsProductsSearch.data.ProductsItem;
 import com.doudian.open.api.alliance_materialsProductsSearch.param.AllianceMaterialsProductsSearchParam;
 import com.doudian.open.api.buyin_doukeOrderAds.BuyinDoukeOrderAdsRequest;
 import com.doudian.open.api.buyin_doukeOrderAds.BuyinDoukeOrderAdsResponse;
@@ -131,30 +132,45 @@ public class DouyinAPI {
         return response;
     }
     //检索精选联盟商品
-    public AllianceMaterialsProductsSearchResponse getJingXuanGoods(String title)
+    public Map getJingXuanGoods(
+            String title,
+            int minPrice,
+            int maxPrice,
+            int minCos,
+            int maxCos,
+            int minCosFee,
+            int maxCosFee,
+            int sortType,
+            long page
+    )
     {
+        //召回结果排序条件，0默认排序1历史销量排序2价格排序3佣金金额排序4佣金比例排序；
         AccessToken accessToken=api_getAccessByAnno();
         AllianceMaterialsProductsSearchRequest request = new AllianceMaterialsProductsSearchRequest();
         AllianceMaterialsProductsSearchParam param = request.getParam();
         param.setTitle(title);
 
-        param.setPriceMin(1);
-        param.setPriceMax(1000);
-        param.setSellNumMin(0);
-        param.setSellNumMax(1000);
-        param.setSearchType(3);
+        param.setPriceMin(minPrice*100);
+        param.setPriceMax(maxPrice*100);
+
+        param.setSearchType(sortType);
+        //默认降序
         param.setSortType(1);
-        param.setCosFeeMin(1);
-        param.setCosFeeMax(50);
-        param.setCosRatioMin(1);
-        param.setCosRatioMax(15);
-        param.setPage(1L);
+        param.setCosFeeMin(minCos*100);
+        param.setCosFeeMax(maxCos*100);
+        param.setCosRatioMin(minCosFee*100);
+        param.setCosRatioMax(maxCosFee*100);
+        param.setPage(page);
         param.setPageSize(10L);
         param.setShareStatus(1);
 
 
         AllianceMaterialsProductsSearchResponse response = request.execute(accessToken);
-        return  response;
+        Map data=new HashMap();
+
+        data.put("data",response.getData().getProducts());
+        data.put("count",response.getData().getTotal());
+        return  data;
     }
     public void getAcByCode()
     {
